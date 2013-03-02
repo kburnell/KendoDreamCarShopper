@@ -332,6 +332,7 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\App\Views\Maintenance\models.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
@@ -397,6 +398,7 @@
     <Content Include="Scripts\utils.min.js.map">
       <DependentUpon>utils.js.bundle</DependentUpon>
     </Content>
+    <Content Include="Views\Maintenance\Models.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

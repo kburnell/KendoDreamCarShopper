@@ -31,10 +31,12 @@
         sortable: true,
         toolbar: ["create"]
     });
+    
+    function models(e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        window.location.href = "/Maintenance/Models/" + dataItem.Id;
+    }
+
 });
 
-function models(e) {
-    e.preventDefault();
-    var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
-    window.location.href = "/Maintenance/Models/" + dataItem.Id;
-}
