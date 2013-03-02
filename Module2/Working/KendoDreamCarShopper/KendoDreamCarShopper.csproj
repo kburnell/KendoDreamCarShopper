@@ -171,7 +171,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\ApiControllerBase.cs" />
-    <Compile Include="Controllers\Api\MakeController.cs" />
+    <Compile Include="Controllers\Api\MakesController.cs" />
     <Compile Include="Controllers\Api\ModelImagesController.cs" />
     <Compile Include="Controllers\Api\ModelsController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
@@ -413,7 +413,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201301052141347_InitialCreate.resx">

@@ -23,13 +23,18 @@
                     </section>
                 </div>
                 <ul id="menu">
-                    <li>Makes</li>
-                    <li>Maintenance
-                        <ul>
-                            <li><a href="/Maintenance/Makes">Makes</a></li>
-                            <li><a href="/Maintenance/Models">Models</a></li>
+                    <li>Makes
+                        <ul id="makesMenu">
                         </ul>
                     </li>
+                    @if (User.IsInRole("Admin")) {
+                        <li>Maintenance
+                            <ul>
+                                <li><a href="/Maintenance/Makes">Makes</a></li>
+                                <li><a href="/Maintenance/Models">Models</a></li>
+                            </ul>
+                        </li>
+                    }
                     <li><a href="/Home/About">About</a></li>
                     <li><a href="/Home/Contact">Contact</a></li>
                 </ul>
