@@ -637,6 +637,10 @@ tr.pager td {
     font-size: 100%;
 }
 
+#menu ul {
+    display: none;
+} 
+
 
 /*	Kendo Overrides
     ------------------------------------------------------- */

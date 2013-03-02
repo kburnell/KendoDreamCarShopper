@@ -5,6 +5,8 @@
         <title>@ViewBag.Title - Kendo Dream Car Shopper</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/kendo.common.min.css" rel="stylesheet" />
+        <link href="~/Content/themes/base/kendo.default.min.css" rel="stylesheet" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/jquery")
@@ -20,6 +22,17 @@
                         @Html.Partial("_LoginPartial")
                     </section>
                 </div>
+                <ul id="menu">
+                    <li>Makes</li>
+                    <li>Maintenance
+                        <ul>
+                            <li><a href="/Maintenance/Makes">Makes</a></li>
+                            <li><a href="/Maintenance/Models">Models</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                </ul>
             </div>
         </header>
         <div id="body">
@@ -37,7 +50,9 @@
                 </div>
             </div>
         </footer>
+        <script src="~/Scripts/kendo.web.min.js"></script>
         <script src="~/Scripts/utils.min.js"></script>
+        <script src="~/Scripts/App/Views/Shared/layout.js"></script>
         @RenderSection("scripts", required: false)
     </body>
 </html>

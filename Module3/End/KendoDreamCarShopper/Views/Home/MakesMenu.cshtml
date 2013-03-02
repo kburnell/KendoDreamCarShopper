@@ -1,0 +1,9 @@
+﻿@model IEnumerable<KendoDreamCarShopper.Models.Make>
+
+@foreach (var make in Model)
+{
+    <li>@Html.ActionLink(make.Name,
+            "Index", "Make",
+            new { make.Id }, null)
+    </li>
+}

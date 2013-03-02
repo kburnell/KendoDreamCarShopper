@@ -172,6 +172,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\ApiControllerBase.cs" />
     <Compile Include="Controllers\Api\MakeController.cs" />
+    <Compile Include="Controllers\Api\ModelImagesController.cs" />
+    <Compile Include="Controllers\Api\ModelsController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MaintenanceController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -242,6 +245,11 @@
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Common\LookupItemViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\MakeViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\ModelDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\ModelImageViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\ModelViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\headerImage.png" />

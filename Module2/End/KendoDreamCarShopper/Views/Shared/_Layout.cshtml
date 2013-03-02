@@ -22,24 +22,26 @@
                         @Html.Partial("_LoginPartial")
                     </section>
                 </div>
-                <nav>
-                    <ul id="menu">
-                        <li>Makes
-                            <ul id="makesMenu" style="display:none">
+                <ul id="menu">
+                    <li>Makes
+                        <ul id="makesMenu">
+                        </ul>
+                    </li>
+                    @if (User.IsInRole("Admin")) {
+                        <li>Maintenance
+                            <ul>
+                                <li><a href="/Maintenance/Makes">Makes</a></li>
+                                <li><a href="/Maintenance/Models">Models</a></li>
                             </ul>
                         </li>
-                        @if (User.IsInRole("Admin")) {
-                            <li>Maintenance
-                                <ul style="display:none">
-                                    <li>@Html.ActionLink("Makes", "Makes","Maintenance")</li>
-                                    <li>@Html.ActionLink("Models", "Models","Maintenance")</li>
-                                </ul>
-                            </li>
-                        }
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
-                </nav>
+                    }
+                    <li>
+                        <a href="/Home/About">About</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </header>
         <div id="body">
