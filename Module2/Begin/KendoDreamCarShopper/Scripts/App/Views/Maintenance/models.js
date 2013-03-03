@@ -43,7 +43,7 @@
 function details(e) {
     e.preventDefault();
     var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
-    window.location.href = "/Maintenance/ModelDetails/" + dataItem.Id + "?showDetails=true&makeId=" + dataItem.MakeId;
+    window.location.href = "/Maintenance/ModelDetails/" + dataItem.Id + "?makeId=" + dataItem.MakeId;
 }
 
 function deleteModel(e) {

@@ -433,7 +433,7 @@ textarea {
         cursor: pointer;
         font-size: 1.2em;
         font-weight: 600;
-        padding: 7px;
+        padding: 3px;
         margin-right: 8px;
         width: auto;
     }
@@ -603,6 +603,14 @@ tr.pager td {
 .inputcontainer input[type="submit"] {
     margin-left: 461px;
     margin-top: 20px;
+}
+
+.inputcontainer select {
+    min-width: 75px;
+}
+
+.inputcontainer th {
+    font-size: 100%;
 }
 
 .required {

@@ -17,8 +17,5 @@ namespace KendoDreamCarShopper.Controllers {
             return View();
         }
 
-        public ActionResult AddModel(int? id) {
-            return View();
-        }
     }
 }
