@@ -11,6 +11,7 @@
     });
     var id = $.url().segment(-1);
     var makeId = $.url().param("makeId");
+    if (!makeId) makeId = null;
     $.ajax({
         url: "/Api/Models/" + id,
         dataType: "json",
@@ -88,7 +89,7 @@
             var images = viewModel.get("images");
             var index = images.indexOf(image);
             images.splice(index, 1);
-            if (e.data.Id != 0) {
+            if (e.data.Id && e.data.Id != 0) {
                 $.ajax({
                     url: "/Api/ModelImages/",
                     dataType: "json",

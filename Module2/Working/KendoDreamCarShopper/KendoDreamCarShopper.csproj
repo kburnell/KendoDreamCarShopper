@@ -342,6 +342,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\App\Views\Maintenance\makes.js" />
+    <Content Include="Scripts\App\Views\Maintenance\modelDetails.js" />
     <Content Include="Scripts\App\Views\Maintenance\models.js" />
     <Content Include="Scripts\App\Views\Shared\layout.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -412,6 +413,7 @@
     </Content>
     <Content Include="Views\Maintenance\Makes.cshtml" />
     <Content Include="Views\Maintenance\Models.cshtml" />
+    <Content Include="Views\Maintenance\ModelDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
