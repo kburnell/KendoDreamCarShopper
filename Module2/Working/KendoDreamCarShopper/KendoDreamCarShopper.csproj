@@ -274,14 +274,6 @@
     <Content Include="Content\images\Models\LamborghiniAventadorLP700-4\Rear_LowRez.png" />
     <Content Include="Content\images\Models\LamborghiniAventadorLP700-4\Side_HighRez.png" />
     <Content Include="Content\images\Models\LamborghiniAventadorLP700-4\Side_LowRez.png" />
-    <Content Include="Content\kendo.common.min.css" />
-    <Content Include="Content\themes\base\Default\editor.png" />
-    <Content Include="Content\themes\base\Default\imagebrowser.png" />
-    <Content Include="Content\themes\base\Default\loading-image.gif" />
-    <Content Include="Content\themes\base\Default\loading.gif" />
-    <Content Include="Content\themes\base\Default\slider-h.gif" />
-    <Content Include="Content\themes\base\Default\slider-v.gif" />
-    <Content Include="Content\themes\base\Default\sprite.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -310,7 +302,6 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\kendo.default.min.css" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -341,10 +332,9 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\App\Views\Maintenance\makes.js" />
     <Content Include="Scripts\App\Views\Maintenance\modelDetails.js" />
+    <Content Include="Scripts\App\Views\Maintenance\makes.js" />
     <Content Include="Scripts\App\Views\Maintenance\models.js" />
-    <Content Include="Scripts\App\Views\Shared\layout.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
@@ -356,7 +346,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\kendo.web.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
@@ -411,17 +400,15 @@
     <Content Include="Scripts\utils.min.js.map">
       <DependentUpon>utils.js.bundle</DependentUpon>
     </Content>
-    <Content Include="Views\Maintenance\Makes.cshtml" />
     <Content Include="Views\Maintenance\Models.cshtml" />
+    <Content Include="Views\Maintenance\Makes.cshtml" />
     <Content Include="Views\Maintenance\ModelDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201301052141347_InitialCreate.resx">

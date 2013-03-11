@@ -2,7 +2,7 @@
 
 namespace KendoDreamCarShopper.Controllers {
 
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class MaintenanceController : ControllerBase {
 
         public ActionResult Makes() {

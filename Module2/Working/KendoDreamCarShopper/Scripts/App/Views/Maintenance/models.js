@@ -27,8 +27,7 @@
                 }
             },
             sort: [{ field: "MakeName", dir: "asc" }, { field: "Name", dir: "asc" }],
-            pageSize: 5,
-            group: { field: "MakeName" }
+            pageSize: 5
         },
         columns: [
             { field: "MakeName", title: "Make", groupHeaderTemplate: '#= value #' },
@@ -37,11 +36,8 @@
             { field: "BasePrice", title: "MSRP", format: "{0:c0}", width: "100px", attributes: { style: "text-align:right;" } },
             { command: [{ text: "Detail", click: details }, { text: "Delete", click: deleteModel }], title: "&nbsp;", width: "170px" }],
         pageable: true,
-        sortable: true,
-        toolbar: kendo.template($("#toolbarTemplate").html())
+        sortable: true
     });
-    $("#models").data("kendoGrid").hideColumn("MakeName");
-    $("#addModel").click(addNewModel);
 });
 
 function details(e) {
@@ -65,12 +61,4 @@ function deleteModel(e) {
             });
         }
     }
-}
-
-function addNewModel() {
-    var url = "/Maintenance/ModelDetails/0";
-    var makeId = $.url().segment(-1);
-    if (!isNaN(makeId))
-        url = url + "?makeId=" + makeId;
-    window.location.href = url;
 }
