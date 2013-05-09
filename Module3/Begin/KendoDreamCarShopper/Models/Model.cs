@@ -29,12 +29,14 @@ namespace KendoDreamCarShopper.Models {
         public decimal ZeroToSixty { get; set; }
 
         [Required, Range(1, 1000), DisplayName("Top Speed (mph)")]
-        public int TopSpeed { get; set; }
+        public int TopSpeed{ get; set; }
 
         [Required, DataType(DataType.Currency), DisplayName("Base Price")]
         public decimal BasePrice { get; set; }
 
         public List<ModelImage> Images { get; set; }
         public Make Make { get; set; }
+
+
     }
 }

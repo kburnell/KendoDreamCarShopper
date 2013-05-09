@@ -8,6 +8,7 @@
  */
 
 (function($) {
+
     $.fn.cssParentSelector = function() {
         var k = 0, i, j,
 

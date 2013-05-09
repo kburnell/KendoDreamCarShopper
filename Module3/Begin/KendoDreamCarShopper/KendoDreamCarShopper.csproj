@@ -48,6 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -58,6 +62,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -74,9 +82,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -101,10 +106,6 @@
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -171,7 +172,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\ApiControllerBase.cs" />
-    <Compile Include="Controllers\Api\MakeController.cs" />
+    <Compile Include="Controllers\Api\ModelImagesController.cs" />
+    <Compile Include="Controllers\Api\ModelsController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\Api\MakesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MaintenanceController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -214,25 +218,25 @@
     <Compile Include="Migrations\201301062100076_ChangePkNameOnOrder.Designer.cs">
       <DependentUpon>201301062100076_ChangePkNameOnOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201301161515045_Config.cs" />
-    <Compile Include="Migrations\201301161515045_Config.Designer.cs">
-      <DependentUpon>201301161515045_Config.cs</DependentUpon>
+    <Compile Include="Migrations\201302111230175_AddLocationToMake.cs" />
+    <Compile Include="Migrations\201302111230175_AddLocationToMake.Designer.cs">
+      <DependentUpon>201302111230175_AddLocationToMake.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201302111332390_AddLocationToMake.cs" />
-    <Compile Include="Migrations\201302111332390_AddLocationToMake.Designer.cs">
-      <DependentUpon>201302111332390_AddLocationToMake.cs</DependentUpon>
+    <Compile Include="Migrations\201302202133282_ReeledInScope.cs" />
+    <Compile Include="Migrations\201302202133282_ReeledInScope.Designer.cs">
+      <DependentUpon>201302202133282_ReeledInScope.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201302202145181_ReelInScope.cs" />
-    <Compile Include="Migrations\201302202145181_ReelInScope.Designer.cs">
-      <DependentUpon>201302202145181_ReelInScope.cs</DependentUpon>
+    <Compile Include="Migrations\201302222203538_UpdatedModel.cs" />
+    <Compile Include="Migrations\201302222203538_UpdatedModel.Designer.cs">
+      <DependentUpon>201302222203538_UpdatedModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201302231804235_UpdateModelValidation.cs" />
-    <Compile Include="Migrations\201302231804235_UpdateModelValidation.Designer.cs">
-      <DependentUpon>201302231804235_UpdateModelValidation.cs</DependentUpon>
+    <Compile Include="Migrations\201302231758284_UpdateModelValidation.cs" />
+    <Compile Include="Migrations\201302231758284_UpdateModelValidation.Designer.cs">
+      <DependentUpon>201302231758284_UpdateModelValidation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201302231915362_UpdateMakeValidation.cs" />
-    <Compile Include="Migrations\201302231915362_UpdateMakeValidation.Designer.cs">
-      <DependentUpon>201302231915362_UpdateMakeValidation.cs</DependentUpon>
+    <Compile Include="Migrations\201302231914321_UpdateMakeValidation.cs" />
+    <Compile Include="Migrations\201302231914321_UpdateMakeValidation.Designer.cs">
+      <DependentUpon>201302231914321_UpdateMakeValidation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -242,6 +246,11 @@
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Common\LookupItemViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\ModelDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\ModelImageViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\ModelViewModel.cs" />
+    <Compile Include="ViewModels\Maintenance\MakeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\headerImage.png" />
@@ -266,6 +275,14 @@
     <Content Include="Content\images\Models\LamborghiniAventadorLP700-4\Rear_LowRez.png" />
     <Content Include="Content\images\Models\LamborghiniAventadorLP700-4\Side_HighRez.png" />
     <Content Include="Content\images\Models\LamborghiniAventadorLP700-4\Side_LowRez.png" />
+    <Content Include="Content\kendo.common.min.css" />
+    <Content Include="Content\themes\base\Default\editor.png" />
+    <Content Include="Content\themes\base\Default\imagebrowser.png" />
+    <Content Include="Content\themes\base\Default\loading-image.gif" />
+    <Content Include="Content\themes\base\Default\loading.gif" />
+    <Content Include="Content\themes\base\Default\slider-h.gif" />
+    <Content Include="Content\themes\base\Default\slider-v.gif" />
+    <Content Include="Content\themes\base\Default\sprite.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -294,6 +311,7 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\kendo.default.min.css" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -322,7 +340,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -331,23 +348,28 @@
     <Content Include="Scripts\jQuery.cssParentSelector.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kendo.web.js" />
+    <Content Include="Scripts\kendo.web.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\purl.js" />
+    <Content Include="Scripts\App\Views\Maintenance\modelDetails.js" />
+    <Content Include="Scripts\App\Views\Maintenance\models.js" />
+    <Content Include="Scripts\App\Views\Maintenance\makes.js" />
+    <Content Include="Scripts\App\Views\Shared\Layout.js" />
     <Content Include="Scripts\utils.js">
       <DependentUpon>utils.js.bundle</DependentUpon>
     </Content>
     <Content Include="Scripts\utils.min.js">
       <DependentUpon>utils.js.bundle</DependentUpon>
     </Content>
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -384,7 +406,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Maintenance\Index.cshtml" />
+    <Content Include="Views\Maintenance\Makes.cshtml" />
+    <Content Include="Views\Maintenance\Models.cshtml" />
+    <Content Include="Views\Maintenance\ModelDetails.cshtml" />
+    <Content Include="Scripts\kendo.web.min.js.map">
+      <DependentUpon>kendo.web.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Maintenance\AddModel.cshtml" />
     <None Include="Scripts\utils.js.bundle" />
     <Content Include="Scripts\utils.min.js.map">
       <DependentUpon>utils.js.bundle</DependentUpon>
@@ -424,20 +452,20 @@
     <EmbeddedResource Include="Migrations\201301062100076_ChangePkNameOnOrder.resx">
       <DependentUpon>201301062100076_ChangePkNameOnOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201301161515045_Config.resx">
-      <DependentUpon>201301161515045_Config.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302111230175_AddLocationToMake.resx">
+      <DependentUpon>201302111230175_AddLocationToMake.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302111332390_AddLocationToMake.resx">
-      <DependentUpon>201302111332390_AddLocationToMake.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302202133282_ReeledInScope.resx">
+      <DependentUpon>201302202133282_ReeledInScope.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302202145181_ReelInScope.resx">
-      <DependentUpon>201302202145181_ReelInScope.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302222203538_UpdatedModel.resx">
+      <DependentUpon>201302222203538_UpdatedModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302231804235_UpdateModelValidation.resx">
-      <DependentUpon>201302231804235_UpdateModelValidation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302231758284_UpdateModelValidation.resx">
+      <DependentUpon>201302231758284_UpdateModelValidation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302231915362_UpdateMakeValidation.resx">
-      <DependentUpon>201302231915362_UpdateMakeValidation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302231914321_UpdateMakeValidation.resx">
+      <DependentUpon>201302231914321_UpdateMakeValidation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -458,7 +486,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>36136</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:15011/</IISUrl>
+          <IISUrl>http://localhost:15013/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

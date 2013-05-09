@@ -1188,7 +1188,7 @@ ko.dependentObservable = function (evaluatorFunctionOrOptions, evaluatorFunction
                 if ((inOld = ko.utils.arrayIndexOf(disposalCandidates, subscribable)) >= 0)
                     disposalCandidates[inOld] = undefined; // Don't want to dispose this subscription, as it's still being used
                 else
-                    _subscriptionsToDependencies.push(subscribable.subscribe(evaluatePossiblyAsync)); // Brand new subscription - add it
+                    _subscriptionsToDependencies.push(subscribable.subscribe(evaluatePossiblyAsync)); // Make new subscription - add it
             });
 
             var newValue = readFunction.call(evaluatorFunctionTarget);
