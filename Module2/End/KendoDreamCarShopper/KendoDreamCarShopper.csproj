@@ -406,7 +406,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\MakesMenu.cshtml" />
     <Content Include="Views\Maintenance\Makes.cshtml" />
     <Content Include="Views\Maintenance\Models.cshtml" />
     <Content Include="Views\Maintenance\ModelDetails.cshtml" />
