@@ -1,5 +1,33 @@
 ﻿@using KendoDreamCarShopper.Models
 @model IEnumerable<Make>
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Dream Car Shopper";
+}
+
+<table id="homeMainContainer">
+    <tr>
+        <td>
+            <div id="makeImages"></div>
+        </td>
+        <td>
+            <div id="mainImages">
+                <img data-bind="imageSlider: mainImages" data-slide-delay="5000" style="display:inline"/> 
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<script id="makesTemplate" type="text/x-kendo-template">
+    
+    <a href="/Make/Index/#= Id #"><img src="#= ImageUrl #" alt="#= Name #" title="#= Name #"/></a><br/>
+
+</script>
+
+@section scripts
+{
+    <script src="~/Scripts/App/customBindings.js"></script>
+    <script src="~/Scripts/App/Views/Home/index.js"></script>
 }

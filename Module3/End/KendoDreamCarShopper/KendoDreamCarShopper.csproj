@@ -177,6 +177,7 @@
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\Api\MakesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Api\MainImagesController.cs" />
     <Compile Include="Controllers\MaintenanceController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -341,6 +342,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\App\customBindings.js" />
+    <Content Include="Scripts\App\Views\Home\index.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
@@ -420,6 +423,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

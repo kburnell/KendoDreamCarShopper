@@ -649,6 +649,24 @@ tr.pager td {
     display: none;
 } 
 
+#homeMainContainer {
+    margin-left: 45px;
+}
+
+#homeMainContainer td {
+    vertical-align: top;
+}
+#makeImages {
+    border: none; 
+    text-align: center;
+}
+#makeImages img {
+    border: none; 
+    height: 65px;
+}
+#makeImages a:hover {
+    background-color: transparent !important;
+}
 
 /*	Kendo Overrides
     ------------------------------------------------------- */
