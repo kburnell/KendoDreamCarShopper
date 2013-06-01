@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace KendoDreamCarShopper.Controllers {
 
@@ -10,6 +9,10 @@ namespace KendoDreamCarShopper.Controllers {
         }
 
         public ActionResult Make(int id) {
+            return View();
+        }
+
+        public ActionResult Model(int id) {
             return View();
         }
     }

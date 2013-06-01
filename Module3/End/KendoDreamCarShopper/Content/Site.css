@@ -2,7 +2,7 @@
     background-color: #fff;
     margin: 0;
     padding: 0;
-    min-width: 1024px;
+    min-width: 1000px;
 }
 
 body {
@@ -700,6 +700,51 @@ tr.pager td {
 }
 #makesMainContainer .modelImageContainer {
     margin-right: 10px;
+} 
+#modelDetailsMainContainer .selectedModelImage {
+    width: 360px;
+}
+#modelDetailsMainContainer .makeImage{
+    width: 95px;
+}
+#modelDetailsMainContainer #modelThumbnails {
+    border: none;
+}
+#modelDetailsMainContainer .thumbnailContainer {
+    margin-top: 10px;
+}
+#modelDetailsMainContainer .thumbnailContainer:hover {
+    cursor: pointer;
+}
+#modelDetailsMainContainer .thumbnailContainer .selectedThumbnail {
+    border-color: #000000;
+}
+.modelDetails #yearAndName {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.modelDetails #basePrice {
+    font-weight: bold;
+}
+.modelDetails #description {
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: .9em;
+}
+.modelDetails #specsHeader {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.modelDetails #specsContainer {
+    margin-left: 20px;
+     font-size: .9em;
+}
+#specsContainer label {
+    width: 100px;
+    display: inline-block;
+    cursor: default;
+     font-size: .9em;
 }
 
 

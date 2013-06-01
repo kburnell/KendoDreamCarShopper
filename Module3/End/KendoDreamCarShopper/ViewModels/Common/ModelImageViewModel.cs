@@ -1,6 +1,6 @@
 ﻿using KendoDreamCarShopper.Models;
 
-namespace KendoDreamCarShopper.ViewModels.Maintenance {
+namespace KendoDreamCarShopper.ViewModels.Common {
 
     public class ModelImageViewModel {
 
