@@ -2,6 +2,7 @@
     background-color: #fff;
     margin: 0;
     padding: 0;
+    min-width: 1024px;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
+    
 }
 
 a {
@@ -649,7 +651,7 @@ tr.pager td {
     display: none;
 } 
 
-#homeMainContainer {
+#homeMainContainer, #makesMainContainer {
     margin-left: 45px;
 }
 
@@ -664,9 +666,42 @@ tr.pager td {
     border: none; 
     height: 65px;
 }
-#makeImages a:hover {
+#makeImages a:hover, .modelImage:hover, .modelHeader:hover {
     background-color: transparent !important;
 }
+
+.center {
+    text-align: center;
+}
+
+#makesMainContainer .makeImageRow {
+    vertical-align: top;
+    width: 300px;
+}
+
+#makesMainContainer .modelDetails {
+    border: none;
+}
+#makesMainContainer .modelImageRow {
+    margin-bottom: 20px;
+}
+#makesMainContainer .modelImage {
+    width: 275px;
+    border: none;
+    padding-right: 30px;
+}
+#makesMainContainer .modelDetails span {
+    display: block;
+    margin-bottom: 5px;
+}
+#makesMainContainer .modelDetails #name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#makesMainContainer .modelImageContainer {
+    margin-right: 10px;
+}
+
 
 /*	Kendo Overrides
     ------------------------------------------------------- */

@@ -8,5 +8,9 @@ namespace KendoDreamCarShopper.Controllers {
         public ActionResult Index() {
             return View();
         }
+
+        public ActionResult Make(int id) {
+            return View();
+        }
     }
 }

@@ -16,6 +16,11 @@ namespace KendoDreamCarShopper.Controllers.Api {
             return EntityStore.Makes.OrderBy(x => x.Name).AsEnumerable().Select(x => MakeViewModel.FromModel(x));
         }
 
+        [HttpGet]
+        public MakeViewModel Get(int id) {
+            return MakeViewModel.FromModel(EntityStore.Makes.FirstOrDefault(x => x.Id == id));
+        }
+
         [HttpPost]
         public void Post(MakeViewModel viewModel) {
             if (viewModel.Id == 0) {
