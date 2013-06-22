@@ -2,6 +2,7 @@
     background-color: #fff;
     margin: 0;
     padding: 0;
+    min-width: 1000px;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
+    
 }
 
 a {
@@ -648,6 +650,102 @@ tr.pager td {
 #menu ul {
     display: none;
 } 
+
+#homeMainContainer, #makesMainContainer {
+    margin-left: 45px;
+}
+
+#homeMainContainer td {
+    vertical-align: top;
+}
+#makeImages {
+    border: none; 
+    text-align: center;
+}
+#makeImages img {
+    border: none; 
+    height: 65px;
+}
+#makeImages a:hover, .modelImage:hover, .modelHeader:hover {
+    background-color: transparent !important;
+}
+
+.center {
+    text-align: center;
+}
+
+#makesMainContainer .makeImageRow {
+    vertical-align: top;
+    width: 300px;
+}
+
+#makesMainContainer .modelDetails {
+    border: none;
+}
+#makesMainContainer .modelImageRow {
+    margin-bottom: 20px;
+}
+#makesMainContainer .modelImage {
+    width: 275px;
+    border: none;
+    padding-right: 30px;
+}
+#makesMainContainer .modelDetails span {
+    display: block;
+    margin-bottom: 5px;
+}
+#makesMainContainer .modelDetails #name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#makesMainContainer .modelImageContainer {
+    margin-right: 10px;
+} 
+#modelDetailsMainContainer .selectedModelImage {
+    width: 360px;
+}
+#modelDetailsMainContainer .makeImage{
+    width: 95px;
+}
+#modelDetailsMainContainer #modelThumbnails {
+    border: none;
+}
+#modelDetailsMainContainer .thumbnailContainer {
+    margin-top: 10px;
+}
+#modelDetailsMainContainer .thumbnailContainer:hover {
+    cursor: pointer;
+}
+#modelDetailsMainContainer .thumbnailContainer .selectedThumbnail {
+    border-color: #000000;
+}
+.modelDetails #yearAndName {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.modelDetails #basePrice {
+    font-weight: bold;
+}
+.modelDetails #description {
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: .9em;
+}
+.modelDetails #specsHeader {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.modelDetails #specsContainer {
+    margin-left: 20px;
+     font-size: .9em;
+}
+#specsContainer label {
+    width: 100px;
+    display: inline-block;
+    cursor: default;
+     font-size: .9em;
+}
 
 
 /*	Kendo Overrides
