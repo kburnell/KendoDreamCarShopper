@@ -2,7 +2,7 @@
     var viewModel = new kendo.Observable({
         modelImages: []
     });
-    var mainImages = new kendo.data.DataSource({
+    var modelImages = new kendo.data.DataSource({
         transport: {
             read: {
                 url: "/Api/MainImages/",
@@ -10,8 +10,8 @@
             }
         }
     });
-    mainImages.fetch(function() {
-        viewModel.mainImages = mainImages.data();
+    modelImages.fetch(function() {
+        viewModel.modelImages = modelImages.data();
         kendo.bind("#body", viewModel);
     });
     var makeImages = new kendo.data.DataSource({

@@ -1,7 +1,4 @@
-﻿//Adapted from code in the Kendo Music Store application
-//https://github.com/telerik/kendo-music-store
-
-kendo.data.binders.imageSlider = kendo.data.Binder.extend({
+﻿kendo.data.binders.imageSlider = kendo.data.Binder.extend({
     init: function (element, bindings, options) {
         kendo.data.Binder.fn.init.call(this, element, bindings, options);
         var binding = this.bindings.imageSlider;

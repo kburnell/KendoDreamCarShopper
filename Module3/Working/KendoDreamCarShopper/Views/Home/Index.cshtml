@@ -2,7 +2,19 @@
     ViewBag.Title = "Dream Car Shopper";
 }
 
+<div id="homeMainContainer" class="row-fluid">
+    <div id="makeImages" class="span3"></div>
+    <div id="mainImages" class="span9">
+        <img data-bind="imageSlider: modelImages" data-slide-delay="5000" />
+    </div>
+</div>
+
+<script id="makesTemplate" type="text/x-kendo-template">
+    <a href="/Home/Make/#= Id #"><img src="#= ImageUrl #" alt="#= Name #" title="#= Name #"/></a><br/>
+</script>
+
 @section scripts
 {
+    <script src="~/Scripts/App/customBindings.js"></script>
     <script src="~/Scripts/App/Views/Home/index.js"></script>
 }
