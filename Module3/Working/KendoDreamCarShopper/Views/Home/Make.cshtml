@@ -2,6 +2,33 @@
     ViewBag.Title = "Dream Car Shopper: Make";
 }
 
+<div id="makesMainContainer" class="row-fluid">
+
+    <div id="makeDetail" class="span2">
+        <img id="makeImage" />
+        <span id="makeLocation"></span>
+    </div>
+    <div id="spacer" class="span3"></div>
+
+    <div id="models" class="span7 modelDetails">
+    </div>
+
+</div>
+
+<script id="modelsTemplate" type="text/x-kendo-template">
+      <div class="row modelImageRow">
+          <div class="span6 modelImageContainer">
+              <a class="modelImage" href="/Home/Model/#= Id #"><img class="modelImage" src="#= DefaultImageUrl #" alt="#= Name #" title="#= Name #"/></a>
+          </div>
+          <div class="modelSpecs">
+              <span id="name">#= Year # #= Name #</span>
+              <span id="engineType">#= EngineType #</span>
+              <span id="engineType">#= kendo.toString(BasePrice, "c") #</span>
+              <a href="/Home/Model/#= Id #">More Details</a>
+          </div>
+      </div>
+</script>
+
 @section scripts
 {
     <script src="~/Scripts/App/Views/Home/Make.js"></script>

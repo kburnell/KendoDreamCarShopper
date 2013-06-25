@@ -19,15 +19,15 @@ namespace KendoDreamCarShopper.Controllers.Api {
 
         [HttpGet]
         public IEnumerable<ModelViewModel> Get(int id) {
-            return EntityStore.Models.Include("Make").Where(x => x.MakeId == id).AsEnumerable().Select(x => ModelViewModel.FromModel(x));
+            return EntityStore.Models.Include("Make").Include("Images").Where(x => x.MakeId == id).AsEnumerable().Select(x => ModelViewModel.FromModel(x));
         }
 
         [HttpGet]
         public ModelDetailsViewModel Get(int id, int? makeId) {
             ModelDetailsViewModel viewModel = ModelDetailsViewModel.FromModel(EntityStore.Models.Include("Make").Include("Images").FirstOrDefault(x => x.Id == id));
-            viewModel.Makes = EntityStore.Makes.Select(x => new LookupItemViewModel{Id = x.Id, Text = x.Name}).OrderBy(x=>x.Text).ToList();
+            viewModel.Makes = EntityStore.Makes.Select(x => new LookupItemViewModel {Id = x.Id, Text = x.Name}).OrderBy(x => x.Text).ToList();
             if (id == 0)
-                viewModel.MakeId = !makeId.HasValue ? null : (makeId.Value == 0?(int?)null: makeId.Value);
+                viewModel.MakeId = !makeId.HasValue ? null : (makeId.Value == 0 ? (int?) null : makeId.Value);
             return viewModel;
         }
 
@@ -42,7 +42,7 @@ namespace KendoDreamCarShopper.Controllers.Api {
             try {
                 EntityStore.SaveChanges();
             }
-            catch (DbEntityValidationException ex ) {
+            catch (DbEntityValidationException ex) {
                 StringBuilder sb = new StringBuilder();
                 foreach (DbEntityValidationResult validationErrors in ex.EntityValidationErrors) {
                     foreach (DbValidationError validationError in validationErrors.ValidationErrors) {
@@ -51,7 +51,6 @@ namespace KendoDreamCarShopper.Controllers.Api {
                 }
                 throw new Exception(sb.ToString());
             }
-            
         }
 
         [HttpDelete]
