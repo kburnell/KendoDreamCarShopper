@@ -1,0 +1,92 @@
+﻿/* Landing
+----------------------------------------------------------*/
+#mobileLanding .logo {
+    display: block;
+    margin: 1em;
+    height: 60px;
+    background: url(/content/images/logo.mobile.png) no-repeat center;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+}
+#mobileLanding .logo .head {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#mobileLanding #mainOptions {
+    margin-top: 20px;
+}
+
+/* Models
+----------------------------------------------------------*/
+#models .photo {
+    width: 6em;
+    height: 4em;
+    float: left;
+    margin: .5em 0;
+    -webkit-box-shadow: 0 1px 3px #333;
+    box-shadow: 0 1px 3px #333;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#models .title{
+    float: left;
+    font-size: .8em;
+    line-height: 1.4em;
+    margin: .8em 1em 0 .6em;
+    width: 50%;
+}
+#models .info {
+    float: left;
+    font-size: .7em;
+    line-height: 1em;
+    margin: 0 0 0 .95em;
+    width: 45%;
+}
+#models .details
+{
+    margin-top: -1em;
+    position: absolute;
+    right: 0.6em;
+    top: 60%;
+}
+
+#models .logo {
+    height: 2em;
+}
+
+/* Model Details
+----------------------------------------------------------*/
+#modelDetail #modelName {
+    text-align: center;
+    font-size: 1.2em;
+}
+#modelDetail .label {
+    display: inline;
+    float: left;
+}
+#modelDetail .value {
+    float: right;
+    font-size: .9em;
+}
+#modelDetail #modelDescription {
+    font-size: .8em;
+}
+
+/* Model Details
+----------------------------------------------------------*/
+#modelImages #modelImages_modelName {
+    text-align: center;
+    font-size: 1.2em;
+}
+#modelImages .modelImage {
+    height: 220px;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

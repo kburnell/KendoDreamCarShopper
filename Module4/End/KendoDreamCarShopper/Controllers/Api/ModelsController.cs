@@ -14,7 +14,7 @@ namespace KendoDreamCarShopper.Controllers.Api {
 
         [HttpGet]
         public IEnumerable<ModelViewModel> Get() {
-            return EntityStore.Models.Include("Make").AsEnumerable().Select(x => ModelViewModel.FromModel(x));
+            return EntityStore.Models.Include("Make").Include("Images").Where(x => x.MakeId == 14 || x.MakeId == 15).AsEnumerable().Select(x => ModelViewModel.FromModel(x));
         }
 
         [HttpGet]

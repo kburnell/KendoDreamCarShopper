@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Dream Car Shopper";
+}
+
+<!-- Landing -->
+<div id="mobileLanding" data-role="view" data-title="Dream Car Shopper">
+    <div class="logo">&nbsp;</div>
+    <ul  data-role="listview" data-style="inset" data-type="group">
+        <li>
+            <ul id="mainOptions">
+                <li data-icon="action"><a href="#models">Find Your Dream Car</a></li>
+                <li data-icon="about"><a href="#about">About The Shop</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- Models -->
+<div id="models" data-role="view" data-layout="mobileLayout" data-title="Our Models" data-init="loadModels">
+    <ul id="modelsList"></ul>
+</div>
+
+<!-- Model Details -->
+<div data-role="view" id="modelDetail" data-layout="modelDetailLayout" data-show="detailShow" data-title="Specs">
+    <ul data-role="listview" data-style="inset">
+        <li style="text-align: center;">
+            <span id="modelName"></span>
+        </li>
+    </ul>
+    <ul data-role="listview" data-style="inset" >
+        <li>
+            <div><span class="label">Base Price: </span></div>
+            <span id="modelPrice" class="value"></span>
+        </li>
+        <li>
+            <div><span class="label">Engine: </span></div>
+            <span id="modelEngine" class="value"></span>
+        </li>
+        <li>
+            <div><span class="label">Break Horsepower: </span></div>
+            <span id="modelHorsepower" class="value"></span>
+        </li>
+        <li>
+            <div><span class="label">0 - 60: </span></div>
+            <span id="modelZeroToSixty" class="value"></span>
+        </li>
+        <li>
+            <div><span class="label">Top Speed: </span></div>
+            <span id="modelTopSpeed" class="value"></span>
+        </li>
+    </ul>
+    <ul data-role="listview" data-style="inset">
+        <li>
+            <span id="modelDescription"></span>
+        </li>
+    </ul>
+    
+</div>
+
+<!-- Model Images -->
+<div data-role="view" id="modelImages" data-show="imagesShow" data-init="imagesInit" data-title="Images" data-layout="modelDetailLayout">
+    <ul data-role="listview" data-style="inset">
+        <li style="text-align: center;">
+            <span id="modelImages_modelName"></span>
+        </li>
+    </ul>
+    <div id="modelImagesDisplay"></div>
+</div>
+
+<!-- About The Shop -->
+<div id="about" data-role="view" data-layout="mobileLayout" data-title="About The Shop">
+   <ul data-role="listview" data-style="inset" data-type="group">
+       <li>
+            About Dream Car Shopper
+           <ul>
+               <li>A place to drool over your dream car!</li>
+           </ul>
+       </li>
+    </ul>
+</div>
+
+<!-- Shared Layouts -->
+<div data-role="layout" data-id="mobileLayout">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-role="backbutton">Back</a>
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+</div>
+
+<div data-role="layout" data-id="modelDetailLayout">
+    <div data-role="header">
+        <div data-role="navbar">
+            <a data-align="left" data-role="backbutton" href="#models">Back</a>
+            <span data-role="view-title"></span>
+        </div>
+    </div>
+    <div data-role="footer">
+        <div data-role="tabstrip" data-select="modelDetail_tabStrip_click">
+            <a href="#modelDetail" data-icon="settings">Specs</a>
+            <a href="#modelImages" data-icon="organize">Images</a>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Templates -->
+<script type="text/x-kendo-template" id="modelsListHeaderTemplate">
+    <img class="logo" src="${value}" />
+</script>
+
+<script type="text/x-kendo-template" id="modelsListItemTemplate">
+    <img class="photo" src="${DefaultImageUrl}" />
+    <h3 class="title">${Year} ${Name}</h3>
+    <p class="info">${kendo.toString(BasePrice,"c0")}</p>
+    <a data-role="button" class="details">Details</a>
+</script>
+
+<script type="text/x-kendo-template" id="modelImageTemplate">
+    --><div class="modelImage" data-role="page" style="background-image: url('${LowResolutionUrl}');">
+    </div><!--
+</script>
+
+@section scripts
+{
+    <script src="~/Scripts/App/Views/Home/index.mobile.js"></script>
+}
