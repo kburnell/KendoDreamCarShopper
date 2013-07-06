@@ -1,0 +1,37 @@
+﻿
+@{
+	ViewBag.Title = "Maintenance - Add Model";
+}
+
+<div id="modelDetails" class="inputcontainer">
+	<label for="make">Make</label>
+	<select id="make" name="make" required data-required-msg="Must select a Make" placeholder="Select Make"  data-text-field="Text" data-value-field="Id" data-bind="source: makes, value: model.MakeId"></select><br/>
+	<label for="year">Year</label>
+	<input id="year" name="Year" type="text" placeholder="Year" data-bind="value: model.Year" min="1950" max="2025" required validationMessage="Please enter Year"/><br/>
+	<label for="model">Model</label>
+	<input id="model" name="ModelName" type="text" placeholder="Model Name" data-bind="value: model.Name" required validationMessage="Please enter Model Name"/><br/>
+	<label for="engineType">Engine</label>
+	<input id="engineType" name="engineType" type="text" placeholder="Engine Type" data-bind="value: model.EngineType" required validationMessage="Please enter Engine Type"/><br/>
+	<label for="breakHorsepower">Break Horsepower (bhp)</label>
+	<input id="breakHorsepower" name="breakHorsepower" type="text" placeholder="Break Horsepower" data-bind="value: model.BreakHorsepower" min="300" max="2000" required validationMessage="Please enter Break Horepower"/><br/>
+	<label for="zeroToSixty">0 - 60 Time (secs)</label>
+	<input id="zeroToSixty" type="text" name="zeroToSixty" placeholder="0 - 60 Time (secs)" data-bind="value: model.ZeroToSixty" min="1" max="10" required validationMessage="Please enter 0 - 60 Time"/><br/>
+	<label for="topSpeed">Top Speed (mph)</label>
+	<input id="topSpeed" type="text" name="topSpeed" placeholder="Top Speed (mph)" data-bind="value: model.TopSpeed" min="100" max="300" required validationMessage="Please enter Top Speed"/><br/>
+	<label for="basePrice">Base Price</label>
+	<input id="basePrice" name="basePrice" type="text" placeholder="Base Price (US $)" data-bind="value: model.BasePrice" min="50000" required validationMessage="Please enter Base Price"/><br/>
+	<label for="description" class="textareaLabel">Description</label>
+	<textarea id="description" name="Description" data-bind="value: model.Description" placeholder="Description" maxlength="750" required validationMessage="Please enter Description"></textarea><br />
+	<div id="images" data-bind="source: images"></div><br />
+	<input id="save" type="button" class="k-button" value="Save" data-bind="click: save"/><br/>
+	<span id="status"></span>
+</div>
+	
+@section scripts
+{
+	<script src="~/Scripts/App/Views/Maintenance/addModel.js"></script>
+}
+
+<script id="commandTemplate" type="text/x-kendo-tmpl">
+   <input type="button" class="k-button" data-bind="click: deleteImage" value="Delete">
+</script>

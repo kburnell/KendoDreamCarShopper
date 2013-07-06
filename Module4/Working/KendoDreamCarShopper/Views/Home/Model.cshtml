@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Dream Car Shopper: Model";
+}
+
+<div id="modelDetailsMainContainer" class="row-fluid">
+    <div class="span6">
+        <img class="selectedModelImage"/>
+        <div id="modelThumbnails"></div>
+    </div>
+    <div class="span6 modelDetails">
+        <div class="row-fluid">
+            <div class="span3">
+                <img id="makeImage" class="makeImage"/>  
+            </div>
+            <div class="span8 text-right">
+                <span id="yearAndName"></span><br/>
+                <span id="basePrice"></span>
+            </div>
+        </div>
+        <p id="description"></p>
+        <span id="specsHeader">Specifications</span>
+        <div id="specsContainer">
+            <div><label>Engine:</label><span id="engineType"></span></div>
+            <div><label>Power:</label><span id="power"></span></div>
+            <div><label>0 - 60:</label><span id="zeroToSixty"></span></div>
+            <div><label>Top Speed:</label><span id="topSpeed"></span></div>
+        </div>
+    </div>
+</div>
+
+<script id="modelThumbnailTemplate" type="text/x-kendo-template">
+    <div class="thumbnailContainer span3">
+        <img class="thumbnail" src="#= LowResolutionUrl #" title="#= ShortDescription #" alt="#= ShortDescription #"/>
+    </div>
+</script>
+
+@section scripts
+{
+    <script src="~/Scripts/App/Views/Home/Model.js"></script>
+}

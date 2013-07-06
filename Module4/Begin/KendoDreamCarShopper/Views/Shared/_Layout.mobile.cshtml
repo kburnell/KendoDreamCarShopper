@@ -1,0 +1,17 @@
+﻿<html>
+    <head>
+        <title></title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="~/Content/kendo.common.min.css" rel="stylesheet"/>
+        <link href="~/Content/themes/base/kendo.default.min.css" rel="stylesheet"/>
+        <link href="~/Content/kendo.mobile.all.min.css" rel="stylesheet"/>
+        <link href="~/Content/site.mobile.css" rel="stylesheet"/>
+        <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+        <script src="~/Scripts/kendo.mobile.min.js"></script>
+    </head>
+    <body>
+        @RenderBody()
+        
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
